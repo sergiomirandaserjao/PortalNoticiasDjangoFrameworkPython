@@ -1,0 +1,16 @@
+{% load i18n %}
+<div id="nav">
+	{% include "menu.html" %}
+</div>
+<div id="search">
+	<form action="{% url noticias.views.realizar_busca_noticias %}" method="get">
+		<div>
+			{% load formulario_tools %}
+			{% exibir_formulario_busca %}
+			{{formulario_busca}}
+		</div>
+	</form>
+</div>
+<div id="logo">
+	<h1><a href="#">{% trans 'Site de notícias' %}</a></h1>
+</div>
